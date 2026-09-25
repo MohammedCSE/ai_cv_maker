@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CVision AI | CV Results</title>
+
+    <link
+        rel="stylesheet"
+        href="results.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Background effects -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                ✦
+            </span>
+
+            CVision<span>AI</span>
+
+        </div>
+
+
+        <button
+            class="new-analysis"
+            onclick="newAnalysis()"
+        >
+            Analyse Another CV
+        </button>
+
+    </nav>
+
+
+
+    <!-- Main content -->
+
+    <main class="results-container">
+
+
+        <!-- Header -->
+
+        <section class="results-header">
+
+            <p class="eyebrow">
+                ✦ AI CV ANALYSIS
+            </p>
+
+            <h1>
+                Your CV has been
+                <span>analysed.</span>
+            </h1>
+
+            <p class="subtitle">
+                Here's how your CV performs across the key areas recruiters look for.
+            </p>
+
+        </section>
+
+
+
+        <!-- Top cards -->
+
+        <section class="top-grid">
+
+
+            <!-- Overall score -->
+
+            <div class="score-card">
+
+                <div class="card-label">
+                    OVERALL CV SCORE
+                </div>
+
+
+                <div class="score-wrapper">
+
+                    <div class="score-circle">
+
+                        <div class="score-ring"></div>
+
+
+                        <div class="score-inner">
+
+                            <strong id="overallScore">
+                                0
+                            </strong>
+
+                            <span>
+                                /100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <h2 id="scoreMessage">
+                    Analysing...
+                </h2>
+
+
+                <p>
+                    Based on your CV content, structure and presentation.
+                </p>
+
+            </div>
+
+
+
+            <!-- Section performance -->
+
+            <div class="performance-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <div class="card-label">
+                            PERFORMANCE
+                        </div>
+
+                        <h2>
+                            Section breakdown
+                        </h2>
+
+                    </div>
+
+
+                    <span class="mini-icon">
+                        ↗
+                    </span>
+
+                </div>
+
+
+
+                <div class="metrics">
+
+
+                    <!-- Profile -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Profile
+                            </span>
+
+                            <strong id="profileScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="profileBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Skills -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Skills
+                            </span>
+
+                            <strong id="skillsScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="skillsBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Experience -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Experience
+                            </span>
+
+                            <strong id="experienceScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="experienceBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Projects -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Projects
+                            </span>
+
+                            <strong id="projectsScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="projectsBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Education -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Education
+                            </span>
+
+                            <strong id="educationScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="educationBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Formatting -->
+
+                    <div class="metric">
+
+                        <div class="metric-info">
+
+                            <span>
+                                Formatting
+                            </span>
+
+                            <strong id="formattingScore">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="formattingBar"></div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Visual graph -->
+
+        <section class="graph-card">
+
+
+            <div class="graph-header">
+
+                <div>
+
+                    <div class="card-label">
+                        CV PERFORMANCE
+                    </div>
+
+                    <h2>
+                        Where your CV stands
+                    </h2>
+
+                </div>
+
+
+                <div class="graph-badge">
+                    AI ANALYSIS
+                </div>
+
+            </div>
+
+
+
+            <div class="bar-chart">
+
+
+                <!-- Profile -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Profile
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartProfile"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartProfileValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Skills -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Skills
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartSkills"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartSkillsValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Experience -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Experience
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartExperience"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartExperienceValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Projects -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Projects
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartProjects"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartProjectsValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Education -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Education
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartEducation"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartEducationValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Formatting -->
+
+                <div class="chart-item">
+
+                    <span>
+                        Formatting
+                    </span>
+
+
+                    <div class="chart-track">
+
+                        <div
+                            class="chart-bar"
+                            id="chartFormatting"
+                        ></div>
+
+                    </div>
+
+
+                    <strong id="chartFormattingValue">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AI improvements -->
+
+        <section class="insights-section">
+
+
+            <div class="section-heading">
+
+                <div class="card-label">
+                    ✦ AI INSIGHTS
+                </div>
+
+
+                <h2>
+                    What you should improve
+                </h2>
+
+
+                <p>
+                    Specific recommendations generated from your CV.
+                </p>
+
+            </div>
+
+
+
+            <div class="insights-grid">
+
+
+                <!-- Improvement 1 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-number">
+                        01
+                    </div>
+
+
+                    <div class="insight-icon">
+                        ✦
+                    </div>
+
+
+                    <p id="improvement1">
+                        Loading improvement...
+                    </p>
+
+                </div>
+
+
+
+                <!-- Improvement 2 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-number">
+                        02
+                    </div>
+
+
+                    <div class="insight-icon">
+                        ↗
+                    </div>
+
+
+                    <p id="improvement2">
+                        Loading improvement...
+                    </p>
+
+                </div>
+
+
+
+                <!-- Improvement 3 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-number">
+                        03
+                    </div>
+
+
+                    <div class="insight-icon">
+                        ◆
+                    </div>
+
+
+                    <p id="improvement3">
+                        Loading improvement...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Improve CV -->
+
+        <section class="improve-card">
+
+
+            <div>
+
+                <div class="card-label">
+                    NEXT STEP
+                </div>
+
+
+                <h2>
+                    Ready to improve your CV?
+                </h2>
+
+
+                <p>
+                    Let AI improve your grammar, wording, structure and presentation while preserving your original information.
+                </p>
+
+            </div>
+
+
+            <button
+                class="improve-button"
+                id="improveButton"
+            >
+                ✦ Improve My CV
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="results.js"></script>
+
+
+</body>
+
+</html>

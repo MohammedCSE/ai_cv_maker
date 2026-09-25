@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CVision AI | AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid"></div>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>CVision<span class="logo-ai"> AI</span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#how">How it works</a>
+            <a href="#features">Features</a>
+        </div>
+
+        <button class="nav-button">
+            Analyse CV
+        </button>
+
+    </nav>
+
+
+    <!-- Hero -->
+    <main class="hero">
+
+        <div class="badge">
+            <span class="pulse"></span>
+            AI-powered CV analysis
+        </div>
+
+        <h1>
+            Your CV has a story.
+            <br>
+            <span>Make it stand out.</span>
+        </h1>
+
+        <p class="hero-text">
+            Upload your CV and let AI analyse your skills, experience,
+            projects and presentation. Get a detailed score and
+            actionable improvements in seconds.
+        </p>
+
+
+        <!-- Upload Card -->
+        <div class="upload-card">
+
+            <div class="upload-icon">
+                ↑
+            </div>
+
+            <h2>Drop your CV here</h2>
+
+            <p>
+                Upload a PDF and let AI find what's holding your CV back.
+            </p>
+
+            <label for="cv-upload" class="upload-button">
+                Choose PDF
+            </label>
+
+            <input
+                type="file"
+                id="cv-upload"
+                accept=".pdf"
+                hidden
+            >
+
+            <div class="file-info">
+                PDF files only · Max 10MB
+            </div>
+
+        </div>
+
+
+        <!-- Trust text -->
+        <div class="trust">
+
+            <div class="trust-item">
+                <span>✦</span>
+                AI-powered analysis
+            </div>
+
+            <div class="trust-item">
+                <span>✓</span>
+                Actionable feedback
+            </div>
+
+            <div class="trust-item">
+                <span>⚡</span>
+                Results in seconds
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Preview section -->
+    <section class="preview" id="features">
+
+        <div class="section-label">
+            WHAT YOU GET
+        </div>
+
+        <h2>
+            More than just a score.
+        </h2>
+
+        <p class="section-text">
+            Understand exactly where your CV is strong and where
+            you can improve.
+        </p>
+
+
+        <div class="dashboard-preview">
+
+            <!-- Score -->
+            <div class="score-card">
+
+                <div class="card-top">
+                    <span>CV SCORE</span>
+                    <span class="status">AI ANALYSIS</span>
+                </div>
+
+                <div class="score-circle">
+
+                    <div class="score-inner">
+                        <strong>82</strong>
+                        <span>/100</span>
+                    </div>
+
+                </div>
+
+                <p class="score-description">
+                    Your CV is looking strong, but there is room
+                    for improvement.
+                </p>
+
+            </div>
+
+
+            <!-- Section scores -->
+            <div class="analysis-card">
+
+                <div class="card-top">
+                    <span>SECTION ANALYSIS</span>
+                    <span>6 AREAS</span>
+                </div>
+
+                <div class="metric">
+                    <div>
+                        <span>Profile</span>
+                        <strong>84</strong>
+                    </div>
+                    <div class="bar">
+                        <div style="width:84%"></div>
+                    </div>
+                </div>
+
+                <div class="metric">
+                    <div>
+                        <span>Skills</span>
+                        <strong>91</strong>
+                    </div>
+                    <div class="bar">
+                        <div style="width:91%"></div>
+                    </div>
+                </div>
+
+                <div class="metric">
+                    <div>
+                        <span>Experience</span>
+                        <strong>68</strong>
+                    </div>
+                    <div class="bar">
+                        <div style="width:68%"></div>
+                    </div>
+                </div>
+
+                <div class="metric">
+                    <div>
+                        <span>Projects</span>
+                        <strong>79</strong>
+                    </div>
+                    <div class="bar">
+                        <div style="width:79%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Improvements -->
+            <div class="improvement-card">
+
+                <div class="card-top">
+                    <span>AI INSIGHTS</span>
+                    <span class="sparkle">✦</span>
+                </div>
+
+                <div class="insight">
+                    <div class="insight-icon red">!</div>
+
+                    <div>
+                        <strong>Add measurable results</strong>
+                        <p>
+                            Show the impact of your work using numbers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="insight">
+                    <div class="insight-icon yellow">+</div>
+
+                    <div>
+                        <strong>Strengthen project descriptions</strong>
+                        <p>
+                            Focus on what you built and the technologies used.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="insight">
+                    <div class="insight-icon green">✓</div>
+
+                    <div>
+                        <strong>Technical skills look strong</strong>
+                        <p>
+                            Your skills section clearly shows your abilities.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+    <section class="how" id="how">
+
+        <div class="section-label">
+            HOW IT WORKS
+        </div>
+
+        <h2>
+            From CV to clarity.
+        </h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Upload</h3>
+                <p>
+                    Drop your existing CV into the analyser.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Analyse</h3>
+                <p>
+                    AI reads your CV and evaluates every major section.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Improve</h3>
+                <p>
+                    Get clear, practical recommendations to improve it.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>CVision<span class="logo-ai"> AI</span></span>
+        </div>
+
+        <p>
+            Build a CV that gets noticed.
+        </p>
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
